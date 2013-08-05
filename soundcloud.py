@@ -7,7 +7,7 @@ __date__ = 'Mon August 05 05:41:06 2013'
 __doc__ = 'simple soundcloud downloader using the widget of soundcloud.com'
 
 class SoundCloud(object):
-  """
+	"""
 	simple class for directly downloading artists pages or track lists from soundcloud.com
 	"""
 
