@@ -62,8 +62,9 @@ class SoundCloud(object):
 		widget = urllib.urlopen(url).read()
 		data = json.loads(widget)
 		
-		if not os.path.isdir(os.path.join(os.getcwd(), self.DOWNLOAD_FOLDER)):
-			os.makedirs(os.path.join(os.getcwd(), self.DOWNLOAD_FOLDER))
+		file_path = os.path.join(os.getcwd(), self.DOWNLOAD_FOLDER)
+		if not os.path.isdir(file_path):
+			os.makedirs(file_path)
 		
 		# 'tracks' is in the keys if an artist page or track-list is opened
 		if 'tracks' in data.keys():
