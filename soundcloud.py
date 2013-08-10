@@ -32,7 +32,7 @@ class SoundCloud(object):
 	
 	def __reporthook(self, blocks_read, block_size, total_size):
 		# clean the system line and 'updating' our status
-		sys.stdout.write("\r% 3.1f%% of %d bytes "
+		sys.stdout.write("\r%3.1f%% of %s "
 			% (float(blocks_read * block_size) / total_size * 100, self._humanize_bytes(total_size)))
 		sys.stdout.flush()
 
